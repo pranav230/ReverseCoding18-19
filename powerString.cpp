@@ -32,9 +32,9 @@ int main()
 		j=499999;
 		while(l--)
 		{
-			temp=result[j]*x;
-			value=(temp+ carry)%10;
-			carry=(temp+carry)/10;
+			temp=result[j]*x + carry;
+			value=temp%10;
+			carry=temp/10;
 			result[j--]=value;
 			k++;
 		}
@@ -53,15 +53,11 @@ int main()
 	{
 		if(result[i]!=0)
 		{
-			j=500000-i;
 			while(i!=499999+1)
 				cout<<result[i++];
 			break;	
 		}
 	}
 	cout<<endl;
-	cout<<j;
-	clock_t end=clock();
-	cout<<"time="<<(end-begin)/CLOCKS_PER_SEC;
 	return 0;
 }

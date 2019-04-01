@@ -17,7 +17,7 @@ int main()
 
 	//making new variables
 	int count=0,number,j,k;
-	clock_t begin=clock();
+	
 	//making list for n rows
 	for(int i=0;i<n-1;i++)
 	{
@@ -37,9 +37,6 @@ int main()
 		}
 		cout<<endl;
 	}
-
-	clock_t end=clock();
-	cout<<(float)(end-begin);
 
 	return 0;
 }
